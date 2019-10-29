@@ -1,0 +1,70 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Unit key</label>
+        <input type="text" class="form-control"
+          formControlName="UnitKey"
+          #UnitKey
+          [(ngModel)] = "unit.unit_key"/>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Unit Type </label>
+        <input type="text" class="form-control"
+          formControlName="UnitType"
+          #UnitType  [(ngModel)] = "unit.unit_type"/>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Primary owner</label>
+        <input type="text" class="form-control"
+          formControlName="PrimaryOwner"
+          #PrimaryOwner [(ngModel)] = "unit.primary_owner"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Secondary owners</label>
+        <input type="text" class="form-control"
+          formControlName="SecondaryOwners"
+          #Rfid [(ngModel)] = "unit.secondary_owners"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Tenant</label>
+        <input type="text" class="form-control"
+          formControlName="Tenant"
+          #Tenant [(ngModel)] = "unit.tenant"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Secondary tenants</label>
+        <input type="text" class="form-control"
+          formControlName="SecondaryTenants"
+          #SecondaryTenants [(ngModel)] = "unit.secondary_tenants"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Check points</label>
+        <input type="text" class="form-control"
+          formControlName="CheckPoints"
+          #CheckPoints [(ngModel)] = "unit.check_points"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Unit number</label>
+        <input type="text" class="form-control"
+          formControlName="UnitNumber"
+          #UnitNumber  [(ngModel)] = "unit.unit_number"/>
+      </div>
+
+
+      <div class="form-group">
+        <button (click) = "updateUnit(unit.unit_key, unit.unit_type, unit.primary_owner,unit.secondary_owners, unit.tenant, unit.secondary_tenants, unit.check_points, unit.unit_number, unit.id)" type="submit" class="btn btn-primary"
+         >
+          Update unit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

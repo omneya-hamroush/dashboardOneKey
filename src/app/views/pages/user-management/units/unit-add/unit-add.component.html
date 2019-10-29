@@ -1,0 +1,73 @@
+<div class="card">
+  <div class="card-body">
+    <a (click)="goBackWithoutId()" [routerLink]="['../units']" class="btn btn-secondary kt-margin-r-10" mat-raised-button matTooltip="Back to the units list">
+      <i class="la la-arrow-left"></i>
+      <span class="kt-hidden-mobile">Back</span>
+    </a>
+    <form [formGroup]="angForm"  novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Unit key</label>
+        <input type="text" class="form-control"
+          formControlName="UnitKey"
+          #UnitKey />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Unit type</label>
+        <input type="text" class="form-control"
+          formControlName="UnitType"
+          #UnitType />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Primary owner</label>
+        <input type="text" class="form-control"
+          formControlName="PrimaryOwner"
+          #PrimaryOwner />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Secondary owners</label>
+        <input type="text" class="form-control"
+          formControlName="SecondaryOwners"
+          #SecondaryOwners
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Tenant</label>
+        <input type="text" class="form-control"
+          formControlName="Tenant"
+          #Tenant
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Secondary tenants</label>
+        <input type="text" class="form-control"
+          formControlName="SecondaryTenants"
+          #SecondaryTenants
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Check points</label>
+        <input type="text" class="form-control"
+          formControlName="CheckPoints"
+          #CheckPoints
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Unit number</label>
+        <input type="text" class="form-control"
+          formControlName="UnitNumber"
+          #UnitNumber
+        />
+      </div>
+
+
+      <div class="form-group">
+        <button (click) = "sendData()"type="submit" class="btn btn-primary"
+         >
+          Create Unit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

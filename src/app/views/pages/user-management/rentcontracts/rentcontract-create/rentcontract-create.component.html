@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="card-body">
+    <a (click)="goBackWithoutId()" [routerLink]="['../rentcontracts']" class="btn btn-secondary kt-margin-r-10" mat-raised-button matTooltip="Back to the rent contracts list">
+      <i class="la la-arrow-left"></i>
+      <span class="kt-hidden-mobile">Back</span>
+    </a>
+    <form [formGroup]="angForm"  novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Unit</label>
+        <input type="text" class="form-control"
+          formControlName="Unit"
+          #Unit />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Tenant</label>
+        <input type="text" class="form-control"
+          formControlName="Tenant"
+          #Tenant />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Secondary tenants</label>
+        <input  type="text" class="form-control"
+          formControlName="SecondaryTenants"
+          #Name
+        />
+        </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Start date</label>
+        <input type="text" class="form-control"
+          formControlName="StartDate"
+          #StartDate
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">End date</label>
+        <input type="text" class="form-control"
+          formControlName="EndDate"
+          #EndDate
+        />
+      </div>
+
+
+      <div class="form-group">
+        <button (click) = "sendData()"type="submit" class="btn btn-primary"
+         >
+          Create Rent contract
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

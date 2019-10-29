@@ -1,0 +1,168 @@
+<div class="card">
+  <div class="card-body">
+    <a (click)="goBackWithoutId()" [routerLink]="['../userkeys']" class="btn btn-secondary kt-margin-r-10" mat-raised-button matTooltip="Back to the user keys list">
+      <i class="la la-arrow-left"></i>
+      <span class="kt-hidden-mobile">Back</span>
+    </a>
+
+    <form [formGroup]="angForm"  novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Activation code</label>
+        <input type="text" class="form-control"
+          formControlName="ActivationCode"
+          #ActivationCode />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Unit number </label>
+        <input type="text" class="form-control"
+          formControlName="UnitNumber"
+          #UnitNumber />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Name</label>
+        <input type="text" class="form-control"
+          formControlName="Name"
+          #Name
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Rfid</label>
+        <input type="text" class="form-control"
+          formControlName="Rfid"
+          #Rfid
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Primary owner</label>
+        <input type="hidden" class="form-control"
+          formControlName="PrimaryOwner"  #PrimaryOwner name="check" value="false">
+        <input type="checkbox" class="form-control"
+          formControlName="PrimaryOwner"  #PrimaryOwner name="check" value="true">
+        <!-- <input type="checkbox" class="form-control"
+          formControlName="PrimaryOwner"
+          #PrimaryOwner checked data-toggle="toggle" data-on="true" data-off="false" data-onstyle="success" data-offstyle="danger"> -->
+
+
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Tenant</label>
+        <input type="hidden" class="form-control"
+          formControlName="IsTenant"  #IsTenant name="check" value="false">
+        <input type="checkbox" class="form-control"
+          formControlName="IsTenant"  #IsTenant name="check" value="true">
+        <!-- <input type="checkbox" class="form-control"
+          formControlName="IsTenant"
+          #IsTenant checked data-toggle="toggle" data-on="true" data-off="false" data-onstyle="success" data-offstyle="danger"
+        /> -->
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Worker</label>
+        <input type="hidden" class="form-control"
+          formControlName="IsWorker"  #IsWorker name="check" value="false">
+        <input type="checkbox" class="form-control"
+          formControlName="IsWorker"  #IsWorker name="check" value="true">
+        <!-- <input type="checkbox" class="form-control"
+          formControlName="IsWorker"
+          #IsWorker checked data-toggle="toggle" data-on="true" data-off="false" data-onstyle="success" data-offstyle="danger"
+        /> -->
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Key type</label>
+        <input type="text" class="form-control"
+          formControlName="KeyType"
+          #KeyType />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Secondary tenant</label>
+        <input type="hidden" class="form-control"
+          formControlName="IsSecondaryTenant"  #IsSecondaryTenant name="check" value="false">
+        <input type="checkbox" class="form-control"
+          formControlName="IsSecondaryTenant"  #IsSecondaryTenant name="check" value="true">
+        <!-- <input type="checkbox" class="form-control"
+          formControlName="IsSecondaryTenant"
+          #IsSecondaryTenant checked data-toggle="toggle" data-on="true" data-off="false" data-onstyle="success" data-offstyle="danger" /> -->
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Rent contract</label>
+        <input type="text" class="form-control"
+          formControlName="RentContract"
+          #RentContract />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Compound</label>
+        <input type="text" class="form-control"
+          formControlName="Compound"
+          #Compound />
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">User</label>
+        <input type="text" class="form-control"
+          formControlName="User"
+          #User />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Confirmed ownership</label>
+        <input type="hidden" class="form-control"
+          formControlName="ConfirmedOwnership"  #ConfirmedOwnership name="check" value="false">
+        <input type="checkbox" class="form-control"
+          formControlName="ConfirmedOwnership"  #ConfirmedOwnership name="check" value="true">
+        <!-- <input type="checkbox" class="form-control"
+          formControlName="ConfirmedOwnership"
+          #ConfirmedOwnership checked data-toggle="toggle" data-on="true" data-off="false" data-onstyle="success" data-offstyle="danger" /> -->
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Dismissed ownership</label>
+        <input type="hidden" class="form-control"
+          formControlName="DismissedOwnership"  #DismissedOwnership name="check" value="false">
+        <input type="checkbox" class="form-control"
+          formControlName="DismissedOwnership"  #DismissedOwnership name="check" value="true">
+        <!-- <input type="checkbox" class="form-control"
+          formControlName="DismissedOwnership"
+          #DismissedOwnership  checked data-toggle="toggle" data-on="true" data-off="false" data-onstyle="success" data-offstyle="danger"/> -->
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Picture</label>
+        <input type="text" class="form-control"
+          formControlName="Picture"
+          #Picture />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Gender</label>
+        <input type="text" class="form-control"
+          formControlName="Gender"
+          #Gender />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">ID</label>
+        <input type="text" class="form-control"
+          formControlName="IdNumber"
+          #IdNumber />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Start date</label>
+        <input type="text" class="form-control"
+          formControlName="StartDate"
+          #StartDate />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Expiry date</label>
+        <input type="text" class="form-control"
+          formControlName="ExpiryDate"
+          #ExpiryDate />
+      </div>
+
+
+      <div class="form-group">
+        <button (click) = "sendData()"type="submit" class="btn btn-primary"
+       >
+          Create User key
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

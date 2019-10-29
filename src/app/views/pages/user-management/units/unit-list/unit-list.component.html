@@ -1,0 +1,39 @@
+<table class="table table-hover">
+  <thead>
+    <button [routerLink]="['../units/create']" mat-raised-button color="primary" matTooltip="Create new Unit">New unit</button>
+  <tr>
+      <td>Unit key</td>
+      <td>Unit type</td>
+      <td>Primary owner</td>
+      <td>Secondary owners</td>
+      <td>Tenant</td>
+      <td>Secondary tenants</td>
+      <td>Check points</td>
+      <td>Unit number</td>
+      <td colspan="2">Actions</td>
+
+  </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of arr | paginate: { itemsPerPage: count, currentPage: p, totalItems: totalItems }" >
+
+          <td>{{item.unit_key}}</td>
+          <td>{{ item.unit_type }}</td>
+          <td>{{ item.primary_owner }}</td>
+          <td>{{ item.secondry_owners }}</td>
+          <td>{{ item.tenant }}</td>
+          <td>{{ item.secondary_tenants }}</td>
+          <td>{{ item.check_points }}</td>
+          <td>{{ item.unit_number }}</td>
+
+          <td><a [routerLink]="['../units/edit', item.id]" class="btn btn-primary">Edit</a></td>
+
+          <!-- <td><a (click) = "deleteUserKey(item._id)" class="btn btn-danger">Delete</a> -->
+          <td><a (click) = "deleteUnit(item.id)" class="btn btn-danger">Delete</a></td>
+          <!-- <td><a [routerLink]="" class="btn btn-danger">Delete</a></td> -->
+      </tr>
+  </tbody>
+</table>
+<div>
+      <pagination-controls (pageChange)="loadData($event)"></pagination-controls>
+  </div>

@@ -1,0 +1,57 @@
+<form [formGroup]="angForm" novalidate >
+    <!-- we will place our fields here -->
+
+    <!-- name -->
+    <div class="form-group">
+        <label>Unit Number</label>
+        <input type="text" formControlName="UnitNumber" [(ngModel)] = "form.unit_number">
+        <!--display error message if name is not valid-->
+        <!-- <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+            Name is required (minimum 5 characters).
+        </small> -->
+    </div>
+    <div class="form-group">
+        <label>Compound unit</label>
+        <input type="text" formControlName="CompoundUnit"   [(ngModel)] = "form.compound_unit">
+        <!--display error message if name is not valid-->
+        <!-- <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+            Name is required (minimum 5 characters).
+        </small> -->
+    </div>
+    <!-- <button type="button" class="my-button-toggle" ng-model="isTesting"
+          btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">Enable Testing
+  </button> -->
+  <div class="form-group">
+      <label>Owner</label>
+      <input type="text" formControlName="Owner"   [(ngModel)] = "form.owner">
+      <!--display error message if name is not valid-->
+      <!-- <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+          Name is required (minimum 5 characters).
+      </small> -->
+  </div>
+  
+  <div class="form-group">
+      <label>Secondary Owners</label>
+      <input type="text" formControlName="SecondaryOwners"   [(ngModel)] = "form.secondry_owners">
+      <!--display error message if name is not valid-->
+      <!-- <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+          Name is required (minimum 5 characters).
+      </small> -->
+  </div>
+  <div class="form-group">
+      <label>Compound</label>
+      <input type="text" formControlName="Compound"   [(ngModel)] = "form.compound">
+      <!--display error message if name is not valid-->
+      <!-- <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+          Name is required (minimum 5 characters).
+      </small> -->
+  </div>
+
+
+
+
+    <button (click) = "updateForm(form.unit_number, form.compound_unit, form.owner, form.name, form.phone, form.email,form.relation, form.id)" type="submit" class="btn btn-primary"
+     >
+          Update form
+        </button>
+</form>

@@ -1,0 +1,35 @@
+<a (click)="goBackWithoutId()" [routerLink]="['../forms']" class="btn btn-secondary kt-margin-r-100" mat-raised-button matTooltip="Go to the forms list">
+
+      <span class="kt-hidden-mobile">Forms</span>
+    </a>
+
+
+		<a (click)="goToUserkeys()" [routerLink]="['../userkeys']" class="btn btn-secondary kt-margin-r-100" mat-raised-button matTooltip="Go to the userkeys list">
+
+		      <span class="kt-hidden-mobile">User keys</span>
+		    </a>
+
+
+
+
+				<a (click)="goToRentcontracts()" [routerLink]="['../rentcontracts']" class="btn btn-secondary kt-margin-r-100" mat-raised-button matTooltip="Go to the rentcontracts list">
+
+				      <span class="kt-hidden-mobile">Rent contracts</span>
+				    </a>
+
+
+
+
+
+						<a (click)="goToUnits()" [routerLink]="['../units']" class="btn btn-secondary kt-margin-r-100" mat-raised-button matTooltip="Go to the units list">
+
+						      <span class="kt-hidden-mobile">Units</span>
+						    </a>
+
+
+
+
+                <button (click) = "logout()"type="submit" class="btn btn-primary"
+                 >
+                  Logout
+                </button>

@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Unit</label>
+        <input type="text" class="form-control"
+          formControlName="Unit"
+          #Unit
+          [(ngModel)] = "rentcontract.unit"/>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Tenant </label>
+        <input type="text" class="form-control"
+          formControlName="Tenant"
+          #Tenant
+          [(ngModel)] = "rentcontract.tenant"/>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4">Secondary tenants</label>
+        <input type="text" class="form-control"
+          formControlName="SecondaryTenants"
+          #SecondaryTenants
+          [(ngModel)] = "rentcontract.secondary_tenants"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Start date</label>
+        <input type="text" class="form-control"
+          formControlName="StartDate"
+          #StartDate
+          [(ngModel)] = "rentcontract.start_date"
+        />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">End date</label>
+        <input type="text" class="form-control"
+          formControlName="EndDate"
+          #EndDate
+          [(ngModel)] = "rentcontract.end_date"
+        />
+      </div>
+
+      <div class="form-group">
+        <button (click) = "updateRentcontract(rentcontract.unit, rentcontract.tenant, rentcontract.secondary_tenants, rentcontract.start_date, rentcontract.end_date, rentcontract.id)" type="submit" class="btn btn-primary"
+         >
+          Update Rent contract
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
